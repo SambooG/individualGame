@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Pictures from "./friends.json"
 
+
 function shuffleArray(array) {
   let i = array.length - 1;
   for (; i > 0; i--) {
@@ -46,13 +47,15 @@ function GamePage (){
     <div>
       <p>Score: {score}</p>
       <p>TopScore: {topScore}</p>
+      <div class="gamepage">
       {randomPictures.map(function(pictureObj){
         return (
           <button className='picButton' key={pictureObj.id} onClick={(e) => handleClick(e, pictureObj.id)}>
-            <img src= {pictureObj.image} alt="looneyTunes" />
+            <img src= {pictureObj.image} alt={pictureObj.alt} />
           </button>
         )
       })}
+      </div>
     </div>
   )
 }
