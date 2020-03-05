@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Pictures from "./friends.json"
+import Pictures from "./friends.json.js"
 
 
 function shuffleArray(array) {
